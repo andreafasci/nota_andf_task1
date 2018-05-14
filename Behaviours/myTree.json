@@ -1,0 +1,117 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 128,
+			"width": 216
+		}
+	},
+	"inputs": [],
+	"outputs": [],
+	"properties": {
+		"kAAu1gTw0y6HdegYTWchUqNQ1NxLbLw3": {
+			"height": 94,
+			"title": "store",
+			"width": 281,
+			"x": 490,
+			"y": -111
+		},
+		"ldkQmX3XSNAuHAaaYnligwOySCCjsQgG": {
+			"height": 90,
+			"title": "Common.move",
+			"width": 360,
+			"x": 802,
+			"y": 107
+		},
+		"mEbFzpEWydu332HQx49wepZ90TUmfYO8": {
+			"height": 90,
+			"title": "Common.move",
+			"width": 360,
+			"x": 821,
+			"y": 10
+		},
+		"u8zdZDQXgsUL9T0YT5RyA3y5rVepUT6W": {
+			"height": 70,
+			"title": "roleSplit",
+			"width": 202,
+			"x": 535,
+			"y": 108
+		},
+		"vOp2xhUkPAnC5NVkkjcir7Zr0KjpHL8K": {
+			"height": 70,
+			"title": "parallel",
+			"width": 202,
+			"x": 262,
+			"y": 20
+		}
+	},
+	"roles": [ {
+		"categories": [ "nota_andf_task1.warrior" ],
+		"name": "category_warrior"
+	}, {
+		"categories": [ "nota_andf_task1.peewee" ],
+		"name": "category_peewee"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "kAAu1gTw0y6HdegYTWchUqNQ1NxLbLw3",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "hills"
+			}, {
+				"name": "value",
+				"value": "nota_andf_task1.hillPosition()"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [ {
+				"children": [],
+				"id": "mEbFzpEWydu332HQx49wepZ90TUmfYO8",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "pos",
+					"value": "{x = hills.h2_x, z = hills.h2_z}"
+				}, {
+					"name": "fight",
+					"value": "true"
+				}, {
+					"name": "scriptName",
+					"value": "Common.move"
+				} ],
+				"scriptName": "Common.move"
+			}, {
+				"children": [],
+				"id": "ldkQmX3XSNAuHAaaYnligwOySCCjsQgG",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "pos",
+					"value": "{x = hills.h3_x, z = hills.h3_z}"
+				}, {
+					"name": "fight",
+					"value": "true"
+				}, {
+					"name": "scriptName",
+					"value": "Common.move"
+				} ],
+				"scriptName": "Common.move"
+			} ],
+			"id": "u8zdZDQXgsUL9T0YT5RyA3y5rVepUT6W",
+			"nodeType": "roleSplit",
+			"parameters": [ {
+				"name": "mode",
+				"value": "any-success"
+			} ]
+		} ],
+		"id": "vOp2xhUkPAnC5NVkkjcir7Zr0KjpHL8K",
+		"nodeType": "parallel",
+		"parameters": [ {
+			"name": "mode",
+			"value": "all-success"
+		} ]
+	}
+}
