@@ -14,13 +14,6 @@ function getInfo()
 	}
 end
 
-local function euclideanDist(a_x, a_y, b_x, b_y)
-	local t1 = a_x - b_x
-	local t2 = a_y - b_y
-	return math.sqrt( math.pow(t1, 2) + math.pow(t2, 2) )
-end
-
-
 -- @description return
 return function()
 	local offset = 128	
